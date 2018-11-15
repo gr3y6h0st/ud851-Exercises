@@ -13,7 +13,7 @@ public class TaskEntry {
     private int id;
     private String description;
     private int priority;
-    // TODO (1) Make updatedAt match a column named updated_at. Tip: Use the ColumnInfo annotation
+    // TODO (1) Make updatedAt match a column named updated_at. Tip: Use the ColumnInfo annotation willdo
     private Date updatedAt;
 
     @Ignore

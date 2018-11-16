@@ -23,6 +23,9 @@ public abstract class AppDatabase extends RoomDatabase {
                 sInstance = Room.databaseBuilder(context.getApplicationContext(),
                         AppDatabase.class, AppDatabase.DATABASE_NAME)
                         // TODO (2) call allowMainThreadQueries before building the instance
+                        //Queries should be done in a SEPERATE THREAD TO AVOID LOCKING UI
+                        //temporarily allowing this to check DB is functional.
+                        .allowMainThreadQueries()
                         .build();
             }
         }
